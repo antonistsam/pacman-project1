@@ -5,9 +5,9 @@ pipeline {
         stage('Compile Stage'){
 
             steps{
-                // withMaven(maven: 'maven_3_8_4'){
-                //     sh 'mvn clean compile'
-                // }
+                withMaven(maven: 'maven_3_8_4'){
+                    sh 'mvn clean compile'
+                }
                 echo 'Compile App'
             }
         }
