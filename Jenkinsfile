@@ -6,7 +6,7 @@ pipeline {
 
             steps{
                 withMaven(maven: 'maven_3_8_4'){
-                    bat 'mvn clean compile'
+                    sh 'mvn clean compile'
                 }
                 echo 'Compile App'
             }
