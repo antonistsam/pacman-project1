@@ -16,7 +16,7 @@ pipeline {
 
             steps{
                 withMaven(maven: 'maven_3_8_4'){
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
                 echo 'Test App'
             }
@@ -25,7 +25,7 @@ pipeline {
         stage('Deployment Stage'){
             steps{
                 withMaven(maven: 'maven_3_8_4'){
-                    sh 'mvn deploy'
+                    bat 'mvn deploy'
                 }
                 echo 'Deploy App'
             }
